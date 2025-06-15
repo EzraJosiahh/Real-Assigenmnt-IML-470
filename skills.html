@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ezra's Professional Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Professional Skills</h1>
+        <p>Technical expertise and language capabilities</p>
+    </header>
+
+  
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+        <a href="Education.html">Education</a>
+        <a href="Experience.html">Experience</a>
+        <a href="qualification.html">Qualification</a>
+        <a href="skills.html">Skills</a>
+        <a href="achievements.html">Achievements</a>
+          <a href="certificates.html">Certificates</a>
+    </nav>
+
+    <div class="container">
+        <section class="skills-section">
+            <h2 class="section-title"><span class="icon">🔧</span> Technical Proficiencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-level" data-level="85%">
+                        <span>HTML5/CSS3</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                    <div class="skill-level" data-level="80%">
+                        <span>JavaScript</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                    <div class="skill-level" data-level="75%">
+                        <span>React</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-level" data-level="70%">
+                        <span>Node.js</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                    <div class="skill-level" data-level="65%">
+                        <span>Express</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-level" data-level="75%">
+                        <span>MySQL</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                    <div class="skill-level" data-level="70%">
+                        <span>MongoDB</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-level" data-level="85%">
+                        <span>Git/GitHub</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                    <div class="skill-level" data-level="80%">
+                        <span>JIRA</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="languages-section">
+            <h2 class="section-title"><span class="icon">🌐</span> Language Proficiency</h2>
+            <div class="language-container">
+                <div class="language-card">
+                    <div class="language-header">
+                        <span class="flag">🇨🇳</span>
+                        <h3>Chinese</h3>
+                        <span class="level-pill native">Native</span>
+                    </div>
+                    <div class="language-details">
+                        <p>Fluent in both written and spoken Mandarin</p>
+                    </div>
+                </div>
+                
+                <div class="language-card">
+                    <div class="language-header">
+                        <span class="flag">🇬🇧</span>
+                        <h3>English</h3>
+                        <span class="level-pill fluent">Fluent</span>
+                    </div>
+                    <div class="language-details">
+                        <p>Professional working proficiency (MUET Band 4.0)</p>
+                    </div>
+                </div>
+                
+                <div class="language-card">
+                    <div class="language-header">
+                        <span class="flag">🇲🇾</span>
+                        <h3>Malay</h3>
+                        <span class="level-pill fluent">Fluent</span>
+                    </div>
+                    <div class="language-details">
+                        <p>Proficient in both Bahasa Melayu and English-Malay translation</p>
+                    </div>
+                </div>
+                
+                <div class="language-card">
+                    <div class="language-header">
+                        <span class="flag">🇯🇵</span>
+                        <h3>Japanese</h3>
+                        <span class="level-pill intermediate">Intermediate</span>
+                    </div>
+                    <div class="language-details">
+                        <p>JLPT N4 level (Conversational proficiency)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ezra. All rights reserved.</p>
+    </footer>
+
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.level-progress');
+            skillBars.forEach(bar => {
+                const level = bar.parentElement.parentElement.getAttribute('data-level');
+                bar.style.width = level;
+                bar.style.opacity = 1;
+            });
+        });
+    </script>
+</body>
+</html>

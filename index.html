@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ezra's Professional Resume</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header>
+        <div class="profile-header">
+          <div class="profile-picture">
+  <img src="profile.jpg.jpeg" alt="Ezra's Profile Picture" class="profile-img" onerror="this.style.display='none'">
+  <div class="picture-placeholder">👨‍💼</div>
+        </div>
+            <div class="profile-info">
+                <h1>Welcome to Ezra's Resume</h1>
+                <p>Your comprehensive guide to my professional journey</p>
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> 014-2396243</p>
+                    <p><strong>Email:</strong> ezrajosiah62@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Education.html">Education</a>
+        <a href="Experience.html">Experience</a>
+        <a href="qualification.html">Qualification</a>
+        <a href="skills.html">Skills</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="certificates.html">Certificates</a>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I'm Ezra, an aspiring web developer passionate about creating functional, clean, and user-friendly websites. I enjoy turning ideas into reality with code, and I am continuously learning new technologies to improve my craft. Currently, I am pursuing a degree in <strong>Information Studies</strong> at <strong>UiTM</strong>.</p>
+        </section>
+
+        <section>
+            <h2>What You'll Find Here</h2>
+            <ul>
+                <li><strong>Education:</strong> My academic background from primary school to university</li>
+                <li><strong>Experience:</strong> Internships, jobs, and projects I've worked on</li>
+                <li><strong>Skills:</strong> Technical skills and multilingual abilities</li>
+                <li><strong>Achievements:</strong> Academic and extracurricular highlights</li>
+                <li><strong>Qualifications:</strong> Certifications and professional development</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ezra. All rights reserved.</p>
+        <div class="footer-contact">
+            <p>Contact: 014-2396243 | Email: ezrajosiah62@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = location.pathname.split('/').pop();
+            document.querySelectorAll('.navbar a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+     
+            const profileImg = document.querySelector('.profile-img');
+            if (profileImg) {
+                profileImg.onerror = function() {
+                    this.style.display = 'none';
+                    document.querySelector('.picture-placeholder').style.display = 'flex';
+                };
+                
+                if (!profileImg.getAttribute('src') || profileImg.getAttribute('src') === '') {
+                    profileImg.style.display = 'none';
+                    document.querySelector('.picture-placeholder').style.display = 'flex';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
